@@ -5,6 +5,7 @@ ___
 This project was dedicated to Thicc subway daddy Rey with their secret java sauce and binary cookies.
 ## How to add an item
 > Note: Both the Date and description must be filled in before you can add an event.
+> Note: Left-click "Add Event" Button to add event.
 ___
 ### Filling in the DatePicker
 You can fill in the date by clicking on the calendar icon on the DatePicker. 
