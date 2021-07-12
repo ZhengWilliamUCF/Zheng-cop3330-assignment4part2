@@ -1,4 +1,4 @@
-##How to use the Application
+# How to use the Application
 A tutorial on how to use my java application.
 ___
 ## Dedication to Rey
