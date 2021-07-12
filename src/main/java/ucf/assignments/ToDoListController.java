@@ -449,7 +449,7 @@ public class ToDoListController implements Initializable {
         // load scene
         stage.setScene(new Scene(loader.load()));
         // set title
-        stage.setTitle("Zacinlo.vpn");
+        stage.setTitle("Filtered.exe");
         // pass parameter from ToDoList to FilteredList
         FilteredListController controller = loader.getController();
         // pass a list of type <Event>
@@ -466,7 +466,7 @@ public class ToDoListController implements Initializable {
         // load scene
         stage.setScene(new Scene(loader.load()));
         // set title
-        stage.setTitle("Antithesis.log");
+        stage.setTitle("Error.exe");
         // pass parameter from ToDoList to ErrorMessage
         ErrorMessageController controller = loader.getController();
         // pass a list of type <Event>

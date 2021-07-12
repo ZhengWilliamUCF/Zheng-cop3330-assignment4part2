@@ -29,7 +29,7 @@ public class Program extends Application {
             // setup scene
             primaryStage.setScene(scene);
             // name scene
-            primaryStage.setTitle("Astaroth.LNK");
+            primaryStage.setTitle("Program.exe");
             // open scene
             primaryStage.show();
         } catch (IOException e) {
