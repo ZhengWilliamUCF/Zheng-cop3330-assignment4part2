@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ucf.assignments.FilteredListController">
+    <TableView fx:id="FilteredStatusTable" layoutX="61.0" layoutY="28.0" prefHeight="400.0" prefWidth="600.0"
+               AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+               AnchorPane.topAnchor="0.0">
+      <columns>
+          <TableColumn fx:id="IsCompletedColumn" prefWidth="149.0" text="Status"/>
+          <TableColumn fx:id="DueDateColumn" prefWidth="144.0" text="Date"/>
+          <TableColumn fx:id="EventDescriptionColumn" prefWidth="306.0" text="Description"/>
+      </columns>
+    </TableView>
+</AnchorPane>

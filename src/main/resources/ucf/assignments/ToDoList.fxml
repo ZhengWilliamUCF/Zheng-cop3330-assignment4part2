@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane dividerPositions="0.07050092764378478, 0.14285714285714285, 0.9332096474953617" orientation="VERTICAL" prefHeight="541.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.ToDoListController">
+    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+        <Button layoutX="10.0" layoutY="5.0" mnemonicParsing="false" onAction="#ImportButtonClicked" prefHeight="25.0" prefWidth="90.0" text="Import..." />
+        <Button layoutX="123.0" layoutY="5.0" mnemonicParsing="false" onAction="#ExportButtonClicked" prefWidth="90.0" text="Export..." />
+        <Separator orientation="VERTICAL" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="0.0" />
+    </AnchorPane>
+    <AnchorPane prefHeight="32.0" prefWidth="688.0">
+        <Button fx:id="AddEventButton" disable="true" layoutX="10.0" layoutY="4.0" mnemonicParsing="false" onAction="#AddEventButtonClicked" prefHeight="25.0" prefWidth="90.0" text="Add Event" />
+        <DatePicker fx:id="EventDate" layoutX="273.0" layoutY="4.0" prefHeight="25.0" prefWidth="135.0" promptText="Select Date here" />
+        <TextField fx:id="EventDescription" layoutX="430.0" layoutY="4.0" prefHeight="25.0" prefWidth="248.0" promptText="Add event description here" />
+        <Separator orientation="VERTICAL" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="222.0" AnchorPane.topAnchor="0.0" />
+        <Separator orientation="VERTICAL" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="0.0" />
+        <Separator orientation="VERTICAL" prefHeight="33.0" AnchorPane.leftAnchor="418.0" />
+        <CheckBox fx:id="EventStatus" layoutX="235.0" layoutY="8.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0" />
+        <Button fx:id="ModifyEventButton" disable="true" layoutX="123.0" layoutY="4.0" mnemonicParsing="false" onAction="#EditButtonClicked" prefWidth="90.0" text="Modify Event" />
+        <Separator orientation="VERTICAL" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="260.0" AnchorPane.topAnchor="0.0" />
+    </AnchorPane>
+    <TableView fx:id="myToDoTable" prefHeight="200.0" prefWidth="200.0">
+      <columns>
+          <TableColumn fx:id="EventStatusColumn" prefWidth="112.0" text="Status" />
+          <TableColumn fx:id="DueDateColumn" prefWidth="150.0" text="Due Date" />
+          <TableColumn fx:id="EventDescriptionColumn" prefWidth="426.0" text="Event Description" />
+      </columns>
+    </TableView>
+    <AnchorPane prefHeight="34.0" prefWidth="688.0">
+        <Button fx:id="ChangeStatusButton" disable="true" layoutX="14.0" layoutY="4.0" mnemonicParsing="false" onAction="#ChangeStatusButtonClicked" prefHeight="25.0" prefWidth="102.0" text="Change Status" />
+        <Button fx:id="DeleteEventButton" disable="true" layoutX="586.0" layoutY="4.0" mnemonicParsing="false" onAction="#DeleteEventButtonClicked" prefHeight="25.0" prefWidth="88.0" text="Delete Event" />
+        <Button fx:id="DeleteAllButton" layoutX="490.0" layoutY="4.0" mnemonicParsing="false" onAction="#DeleteAllButtonClicked" prefHeight="25.0" prefWidth="88.0" text="Delete All" />
+        <Separator layoutX="127.0" orientation="VERTICAL" prefHeight="33.0" prefWidth="8.0" />
+        <Button fx:id="ShowCompletedButton" layoutX="142.0" layoutY="4.0" mnemonicParsing="false" onAction="#ShowCompletedButtonClicked" prefHeight="17.0" prefWidth="117.0" text="Show Completed" />
+        <Button fx:id="ShowIncompleteButton" layoutX="268.0" layoutY="4.0" mnemonicParsing="false" onAction="#ShowIncompleteButtonClicked" prefHeight="25.0" prefWidth="117.0" text="Show Incomplete" />
+        <Button fx:id="ShowAllButton" layoutX="397.0" layoutY="4.0" mnemonicParsing="false" onAction="#ShowAllButtonClicked" prefHeight="25.0" prefWidth="70.0" text="Show All" />
+        <Separator layoutX="472.0" orientation="VERTICAL" prefHeight="33.0" prefWidth="18.0" />
+    </AnchorPane>
+</SplitPane>

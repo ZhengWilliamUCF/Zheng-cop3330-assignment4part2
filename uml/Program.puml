@@ -1,0 +1,102 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class MainProgram{
+    main()
+    start()
+}
+class Event{
+    description: String
+    eventDate : String
+    eventStatus: boolean
+
+    Event(description, eventDate, eventStatus)
+
+    getDescription()
+    getEventData()
+    getEventStatus()
+    getDateAndDescription()
+    setEventStatus()
+    setEventDate()
+    setDescription()
+}
+class FilteredListController{
+     FilteredStatusTable: TableView<Event>
+     DueDateColumn: TableColumn<Event, String>
+     EventDescriptionColumn: TableColumn<Event, String>
+     IsCompletedColumn: TableColumn<Event, Boolean>
+
+     initialize()
+     transferData(List<Event> filtered)
+}
+class ToDoListController{
+    EventStatus: CheckBox
+    EventDate: DatePicker
+    EventDescription: TextField
+
+    myToDoTable: TableView<Event>
+    DueDateColumn:
+    EventDescriptionColumn:
+    EventStatusColumn:
+
+    AddEventButton: Button
+    ModifyEventButton: Button
+    DeleteEventButton: Button
+    ChangeStatusButton: Button
+    DeleteAllButton: Button
+    ShowAllButton: Button
+    ShowCompletedButton: Button
+    ShowIncompleteButton: Button
+
+    filechooser: FileChooser
+    master: ObservableList<Event>
+
+    AddEventButtonClicked()
+    DeleteEventButtonClicked()
+    EditButtonClicked()
+    ShowCompletedButtonClicked
+    ShowIncompleteButtonClicked
+    ShowAllButtonClicked()
+    ImportButtonClicked()
+    ExportButtonClicked()
+    ChangeStatusButtonClicked()
+
+    initialize()
+
+    ValidateGregorianDate(int year, int month, int day)
+    CheckLengthTextField()
+    CheckEmptyTextField()
+    CheckEmptyDatePicker()
+    getYear()
+    getMonth()
+    getDay()
+
+    ClearTextField()
+    ClearDatePicker()
+    ClearCheckBox()
+
+    ItemIsSelected()
+    ItemIsUnselected()
+
+    AddItemsToList()
+    updateMaster()
+    showFilteredList(List<Event> filtered)
+
+    ReadFile(File data)
+    saveDataToFile()
+    convertDataToText(String data, File file)
+}
+
+class ErrorMessageController{
+    ErrorMessage: Label
+    setErrorMessage(String text)
+}
+
+javafx.FilteredList <-- javafx.ToDoList
+javafx.ToDoList <-- MainProgram
+MainProgram --> FilteredListController
+MainProgram --> ToDoListController
+ToDoListController --> ErrorMessageController
+FilteredListController <-- Event
+ToDoListController <-- Event
+@enduml
